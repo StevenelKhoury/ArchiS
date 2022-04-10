@@ -9,6 +9,8 @@ import service.ArticleService;
 import java.util.List;
 import java.util.UUID;
 
+@CrossOrigin(origins="http://localhost:5050")
+@RestController
 public class ArticleController {
 
     @Autowired
