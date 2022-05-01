@@ -25,6 +25,10 @@ public class ArticleController {
         return service.saveArticle(a);
     }
 
+    @GetMapping("/article")
+    public List<Article> listArticle() {
+        return service.getArticle();
+    }
     @GetMapping("/article/{id}")
     public Article findArticleByIdArticle(@PathVariable UUID id){
         return service.getArticleByIdArticle(id);
