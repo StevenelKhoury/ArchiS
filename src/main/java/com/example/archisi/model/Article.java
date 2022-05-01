@@ -1,13 +1,14 @@
-package model;
+package com.example.archisi.model;
 
-import jdk.jfr.Category;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.GenericGenerator;
 
-import javax.persistence.*;
-import java.util.List;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import java.util.UUID;
 
 @Data

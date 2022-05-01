@@ -1,10 +1,11 @@
-package service;
+package com.example.archisi.service;
 
+import com.example.archisi.model.Article;
+import com.example.archisi.repository.ArticleRepository;
 import lombok.NoArgsConstructor;
-import model.Article;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import repository.ArticleRepository;
 
 import java.util.UUID;
 

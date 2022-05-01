@@ -1,24 +1,18 @@
-package model;
+package com.example.archisi.model;
 
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import java.util.List;
 import java.util.UUID;
 
 @Entity
-public class Boutique {
+public class Photo {
     @Id
     @GeneratedValue(generator = "uuid2")
     @GenericGenerator(name = "uuid2", strategy = "org.hibernate.id.UUIDGenerator")
-    UUID id;
-    String name;
-    String boutique_description;
-    String adress;
-    String contact;
-    @OneToMany
-    List<Article> articles;
+    private UUID id;
+    private float size;
+    private String url;
 }

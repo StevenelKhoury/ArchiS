@@ -1,15 +1,16 @@
-package controller;
+package com.example.archisi.controller;
 
-import model.Article;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
-import repository.ArticleRepository;
-import service.ArticleService;
 
-import java.util.List;
-import java.util.UUID;
+        import com.example.archisi.model.Article;
+        import com.example.archisi.service.ArticleService;
+        import com.example.archisi.repository.ArticleRepository;
+        import org.springframework.beans.factory.annotation.Autowired;
+        import org.springframework.web.bind.annotation.*;
 
-@CrossOrigin(origins="http://localhost:5050")
+        import java.util.List;
+        import java.util.UUID;
+
+@CrossOrigin(origins="http://localhost:4200")
 @RestController
 public class ArticleController {
 
@@ -45,3 +46,4 @@ public class ArticleController {
         return service.updateArticle(article);
     }
 }
+

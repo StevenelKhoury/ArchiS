@@ -1,4 +1,4 @@
-package model;
+package com.example.archisi.model;
 
 import org.hibernate.annotations.GenericGenerator;
 

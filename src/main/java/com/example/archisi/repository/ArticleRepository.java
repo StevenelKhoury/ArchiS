@@ -1,6 +1,7 @@
-package repository;
+package com.example.archisi.repository;
 
-import model.Article;
+
+import com.example.archisi.model.Article;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
@@ -14,7 +15,6 @@ public interface ArticleRepository extends JpaRepository<Article,Integer>, CrudR
     Article findByIdArticle(UUID id);
 
     void deleteByIdArticle(UUID id);
-
 
 
 }

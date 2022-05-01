@@ -1,4 +1,4 @@
-package model;
+package com.example.archisi.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
