@@ -6,12 +6,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import repository.*;
 
+import java.util.List;
 import java.util.UUID;
 
 @Service
 @NoArgsConstructor
 public class BoutiqueService {
     private BoutiqueRepository repository;
+
+    private List<Boutique> boutiques;
 
     @Autowired
     public BoutiqueService(BoutiqueRepository repository) {
@@ -23,6 +26,8 @@ public class BoutiqueService {
     public Boutique getBoutiqueById(UUID id){
         return repository.findById(id);
     }
+
+    public Boutique getBoutique(UUID id) { return boutiques.stream().filter(t -> t.getId().equals(id)).findFirst().get();}
 
     public Boutique getBoutiqueByName(String name){
         return repository.findByName(name);

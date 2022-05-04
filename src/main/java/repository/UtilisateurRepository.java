@@ -15,8 +15,6 @@ public interface UtilisateurRepository extends JpaRepository<Utilisateur,Integer
     Utilisateur findByName(String name);
 
     Utilisateur findById(UUID id);
-    public UUID getId();
-    public String getName();
-    public String getPassword();
-    public TypeUser getTypeUser();
+
+    void deleteUtilisateursById(UUID id);
 }

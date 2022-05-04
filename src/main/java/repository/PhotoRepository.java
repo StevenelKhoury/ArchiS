@@ -11,10 +11,6 @@ import java.util.UUID;
 @Repository
 public interface PhotoRepository extends JpaRepository<Photo,Integer>, CrudRepository<Photo, Integer> {
     Photo findById(UUID id);
-    public UUID getId();
-    public float getSize();
-    public String getUrl();
-
 
 
 }

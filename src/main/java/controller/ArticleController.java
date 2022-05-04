@@ -16,36 +16,40 @@ public class ArticleController {
     @Autowired
     private ArticleService service;
 
+
+
     public ArticleController(ArticleService service) {
         this.service = service;
     }
 
     @PostMapping("/article")
-    public Article addArticle(@RequestBody Article a){
-        return service.saveArticle(a);
+    public int addArticle(@RequestBody Article a){
+        service.saveArticle(a);
+        return 200;
     }
 
     @GetMapping("/article")
     public List<Article> listArticle() {
-        return service.getArticle();
+        return service.getAllArticle();
     }
     @GetMapping("/article/{id}")
     public Article findArticleByIdArticle(@PathVariable UUID id){
-        return service.getArticleByIdArticle(id);
+        return service.getArticle(id);
     }
 
     @GetMapping("/article/{libelle}")
     public Article findArticleByLibelle(@PathVariable String libelle){
         return service.getArticleByLibelle(libelle);
-    }
+    } //voir avec guillaume la v2
 
     @DeleteMapping("/article/{id}")
-    public Article deleteArticleByIdArticle(@PathVariable UUID id){
-        return service.getArticleByIdArticle(id);
+    public int deleteArticleByIdArticle(@PathVariable UUID id){
+        service.deleteByIdArticle(id);
+        return 200;
     }
 
     @PutMapping("/article/{id}")
-    public Article updateArticle(@RequestBody Article article){
-        return service.updateArticle(article);
+    public void updateArticle(@RequestBody Article article, @PathVariable UUID id){
+        service.updateArticle(article);
     }
 }
